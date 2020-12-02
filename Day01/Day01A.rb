@@ -1,4 +1,4 @@
-# Advent of Code Day 1 - Puzzle 1
+## Advent of Code Day 1 - Puzzle 1 - Part 1
 
 # Before you leave, the Elves in accounting just need you to fix your expense report
 # (your puzzle input); apparently, something isn't quite adding up.
@@ -28,10 +28,12 @@
   # expenses = [1721, 979, 366, 299, 675, 1456]
   # total = 2020
 
+# Find the highest number in the array - extra for myself.
 def get_highest_number(expenses)
   return expenses.max_by { |expense| expense }
 end
 
+# Find the total of all the numbers in the array - extra for myself.
 def get_total(expenses)
 
   sum = 0
@@ -44,6 +46,7 @@ def get_total(expenses)
 
 end
 
+# Answer to the original question - pair the numbers in the array using the .combination and .detect methods to find the ones that match the total provided.
 def get_twenty_twenty(expenses, total)
 
   arr = expenses.combination(2).detect { |expense1, expense2| expense1 + expense2 == total }
@@ -53,6 +56,15 @@ def get_twenty_twenty(expenses, total)
 
 end
 
+## Advent of Code Day 1 - Puzzle 1 - Part 2
+
+# The Elves in accounting are thankful for your help; one of them even offers you a starfish coin they had left over from a past vacation. They offer you a second one if you can find three numbers in your expense report that meet the same criteria.
+#
+# Using the above example again, the three entries that sum to 2020 are 979, 366, and 675. Multiplying them together produces the answer, 241861950.
+#
+# In your expense report, what is the product of the three entries that sum to 2020?
+
+# Extension of the answer to Part 1, but for the 3 numbers to get to the total.
 def get_twenty_twenty_from_three(expenses, total)
 
   arr = expenses.combination(3).detect { |expense1, expense2, expense3| expense1 + expense2 + expense3 == total }
