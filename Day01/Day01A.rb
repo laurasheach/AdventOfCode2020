@@ -49,6 +49,15 @@ def get_twenty_twenty(expenses, total)
   arr = expenses.combination(2).detect { |expense1, expense2| expense1 + expense2 == total }
   multiplied_total = arr[0] * arr[1]
 
-  return "These two numbers which add up to #{total} when multiplied gives us #{multiplied_total}"
+  return "The two numbers which add up to #{total} when multiplied gives us #{multiplied_total}"
+
+end
+
+def get_twenty_twenty_from_three(expenses, total)
+
+  arr = expenses.combination(3).detect { |expense1, expense2, expense3| expense1 + expense2 + expense3 == total }
+  multiplied_total = arr[0] * arr[1] * arr[2]
+
+  return "The three numbers which add up to #{total} when multiplied gives us #{multiplied_total}"
 
 end
