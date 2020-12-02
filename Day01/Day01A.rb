@@ -1,6 +1,6 @@
 ## Advent of Code Day 1 - Puzzle 1 - Part 1
 
-## Note - I have gone beyond the requirements in order to practice my code & assist my learning
+## Note - I have gone beyond the requirements in order to practice my code & assist my learning - answers below.
 
 # require ('pry')
 
